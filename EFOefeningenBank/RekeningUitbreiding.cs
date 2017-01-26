@@ -12,5 +12,11 @@ namespace EFOefeningenBank
         {
              Saldo += bedrag;
         }
+
+        public void Overschrijven(Rekening rekeningNaar, decimal bedrag)
+        {
+            this.Saldo -= bedrag;
+            rekeningNaar.Saldo += bedrag;
+        }
     }
 }
